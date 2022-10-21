@@ -1,14 +1,16 @@
 import React from 'react';
 import { Fragment } from 'react';
+import logo from '../img/logo-star-wars.png';
+import { Img, P } from './Styles';
 
 const Navbar = () => {
   return (
     <Fragment>
       <div className='logo'>
-        <img src={'./img/logo-star-wars.png'} alt='Star Wars Logo' />
+        <Img src={logo} alt='Star Wars Logo' />
         <div className='login'>
-          <p>LOGIN</p>
-          <p>SING UP</p>
+          <P>LOG IN</P>
+          <P>SING UP</P>
         </div>
       </div>
     </Fragment>
