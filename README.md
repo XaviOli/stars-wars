@@ -2,11 +2,11 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+A website with information about `Star Wars spaceships.`
+
 We will consume API data, displaying it on the screen in a list, and we will implement the detail of each item in the list.
 
-A website with information about Star Wars spaceships.
-
-# ⭐️ Level 1
+# 🚀 Level 1
 
 ## `Exercise 1`
 
