@@ -1,16 +1,23 @@
-import './App.css';
-import Navbar from './components/Navbar';
-import Navhome from './components/Navhome';
-import { H1 } from './components/Styles';
+import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Navbar from "./components/navbar/Navbar";
+import Navhome from './components/navhome/Navhome';
+
 
 function App() {
   return (
     <>
-      <div className="App">
+      <header>
         <Navbar />
-        <H1>Star wars App</H1>
         <Navhome />
-      </div>
+      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<div>Home</div>} />
+          <Route path="/users" element={<div>Users</div>} />
+          <Route path="/" element={<div>Home</div>} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
