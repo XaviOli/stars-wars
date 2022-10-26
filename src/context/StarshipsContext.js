@@ -1,7 +1,6 @@
 import React, { createContext, useState} from 'react';
 import axios from 'axios';
 
-
 const StarshipsContext = React.createContext();
 
 const StarshipsProvider = ({children}) => {
