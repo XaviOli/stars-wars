@@ -21,4 +21,4 @@ const NavHomeLinkContainer = styled(Div)`
 `;
 
 
-export { NavHomeLinkContainer, NavhomeContainer, NavhomeLink};
+export { NavHomeLinkContainer, NavhomeContainer, NavhomeLink };
