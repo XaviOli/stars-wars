@@ -1,19 +1,28 @@
 import React, {useEffect, useContext} from 'react';
 import StarshipsContext from '../../context/StarshipsContext';
+import { useParams } from 'react-router-dom';
 import {RingLoader} from 'react-spinners';
 
 
 const StarshipDetails = () => {
-    const {getStarshipById, starshipDetails, isLoading, error } = useContext(StarshipsContext);
-  
+    const { id } = useParams();
+    const {getStarshipImageById, getStarshipById, starshipDetails, starshipImage, isLoading, isLoadingImage, error } = useContext(StarshipsContext);
+    const isLoadingDetails = isLoadingImage || isLoading;
+
     useEffect(() => {
-        getStarshipById();
+        getStarshipImageById(id);
+        getStarshipById(id);
     }, []);
 
   return (
     <div>
-       {!isLoading && starshipDetails &&
+       {!isLoadingDetails && starshipDetails &&
           <div >
+            {starshipImage && 
+            <img 
+            alt="starship image" 
+            src={starshipImage} 
+            />}
             <h2>{starshipDetails.name}</h2>
             <p>{starshipDetails.model}</p>
           </div>} 

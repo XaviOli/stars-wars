@@ -17,7 +17,7 @@ const Navbar = () => {
         </ImageContainer>
         <NavLinkContainer>
             <NavbarLink>LOG IN</NavbarLink>
-            <NavText>{'//'}</NavText>
+              <NavText>{'//'}</NavText>
             <NavbarLink>SING UP</NavbarLink>
         </NavLinkContainer>
       </NavbarContainer>

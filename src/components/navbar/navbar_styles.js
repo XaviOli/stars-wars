@@ -27,7 +27,7 @@ const NavLinkContainer = styled(Div)`
 
 const NavText = styled(P)`
     color: #5a5a5a;
-`;
+`
 
 export { ImageContainer, NavbarContainer, NavLinkContainer, NavbarLink, NavText };
 
