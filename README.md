@@ -61,9 +61,7 @@ The list of ships can only be visible to registered users, you must protect the 
 
 ## `Exercise 8`
 
-We will add the card of each ship showing the cards of its pilots.
-
-We will create a new component to display these cards within the ship detail.
+We will add the card of each ship showing the cards of its pilots and we will create a new component to display these cards within the ship detail.
 
 ## `Exercise 9`
 
