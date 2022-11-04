@@ -1,11 +1,11 @@
 import React from 'react'
-import { NavHomeLinkContainer, NavhomeContainer, NavhomeLink } from './navhome_styles';
+import { NavHomeLinkContainer, NavhomeLink } from './navhome_styles';
 import './styles.css';
 
 const Navhome = () => {
   return (
     <>
-        <NavHomeLinkContainer>
+        <NavHomeLinkContainer className="nav-home-container">
           <NavhomeLink 
             to="/home" >HOME</NavhomeLink>
           <NavhomeLink 

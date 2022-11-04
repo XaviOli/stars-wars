@@ -21,7 +21,7 @@ function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/login" element={<Login />} />
           <Route path="/starships" element={<Starships />} />
-          <Route path="/starship-details" element={<StarshipDetails />} />
+          <Route path="/starship/:id" element={<StarshipDetails />} />
           <Route path="/home" element={<Home />} />
         </Routes>
 
