@@ -4,7 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import Starships from './pages/starships/Starships';
 import StarshipDetails from './pages/starshipDetails/StarshipDetails';
-
+import Login from './pages/login/Login';
+import Register from './pages/register/Register';
 
 function App() {
   return (
@@ -17,8 +18,10 @@ function App() {
         </header>
 
         <Routes>
+          <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
           <Route path="/starships" element={<Starships />} />
-          <Route path="/starship/:id" element={<StarshipDetails />} />
+          <Route path="/starship-details" element={<StarshipDetails />} />
           <Route path="/home" element={<Home />} />
         </Routes>
 
@@ -27,4 +30,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

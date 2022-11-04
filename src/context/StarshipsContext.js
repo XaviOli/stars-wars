@@ -9,20 +9,8 @@ const StarshipsProvider = ({children}) => {
     const [ isLoading, setIsLoading] = useState(false);
     const [ error, setError] = useState(null);
     const [ page, setPage ] = useState(1);
+    const [ starshipURL, setStarshipURL] = useState(null);
     const [ starshipDetails, setStarshipDetails ] = useState(null);
-    const [ isLoadingImage, setIsLoadingImage ] = useState(false);
-    const [ starshipImage, setStarshipImage ] = useState(null);
-    const [ isBottom, setIsBottom ] = useState(false);
-
-    const handleScroll = () => {
-      const scrollTop = window?.scrollY || document?.documentElement?.scrollTop || document?.body?.scrollTop;
-      const scrollHeight = document?.documentElement?.scrollHeight || document?.body?.scrollHeight;
-      const innerHeight = window.innerHeight;
-
-      if (scrollTop + innerHeight + 100 >= scrollHeight) {
-        setIsBottom(true);
-      }
-    }
 
     const getStarships = async () => {
         setIsLoading(true);
@@ -33,9 +21,7 @@ const StarshipsProvider = ({children}) => {
                   }
                 })
             error && setError(false);
-          setStarships([...starships, ...response.data.results]);
-          setIsBottom(false);
-          setPage(page + 1)
+          setStarships(response.data.results);
         }
         catch(error){
             setError(error.message);
@@ -57,10 +43,11 @@ const StarshipsProvider = ({children}) => {
       };
 
       
-    const getStarshipById = async (id) => {
+    const getStarshipById = async () => {
+        console.log(starshipURL)
         setIsLoading(true);
         try {
-          const response = await axios.get(`https://swapi.dev/api/starships/${id}`)
+          const response = await axios.get(starshipURL)
           error && setError(false);
           setStarshipDetails(response.data);
         }
@@ -78,46 +65,19 @@ const StarshipsProvider = ({children}) => {
         //.catch((error) => console.log(error));
         //.finally(()=> setIsLoading(false))
       };
-
-      const getStarshipImageById = async (id) => {
-        setIsLoadingImage(true);
-        try {
-          await axios.get(`https://starwars-visualguide.com/assets/img/starships/${id}.jpg`)
-          error && setError(false);
-          setStarshipImage(`https://starwars-visualguide.com/assets/img/starships/${id}.jpg`);
-        }
-        catch(error){
-
-        }
-        finally {
-            setIsLoadingImage(false);
-        }
-      
-        // axios.get(starshipURL)
-        // .then((response)=> {
-        //   setStarships(response.data);
-        // })
-        //.catch((error) => console.log(error));
-        //.finally(()=> setIsLoading(false))
-      };
-
     
   return (
   <StarshipsContext.Provider 
     value={{
-        isBottom,
         starships,
         isLoading,
-        isLoadingImage,
         error,
         page,
         starshipDetails,
-        starshipImage,
         setPage,
         getStarships,
-        getStarshipById, 
-        getStarshipImageById,
-        handleScroll
+        setStarshipURL,
+        getStarshipById
     }}
    >
     {children}

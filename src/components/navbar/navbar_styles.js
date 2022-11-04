@@ -1,33 +1,34 @@
-import styled from "styled-components";
-import { Link, Div, P } from '../../styles'
+import styled from 'styled-components';
+import { Div, P } from '../../styles';
+import { NavLink } from 'react-router-dom';
 
 const NavbarContainer = styled(Div)`
-    display: flex;
+    display: flex; 
     justify-content: center;
 `;
 
-const NavbarLink = styled(Link)`
+const NavbarLink = styled(NavLink)`
     color: #808080;
-    padding: 5px;
+    padding: 5px; 
     cursor: pointer;
+    text-decoration: none;
 `;
 
 const ImageContainer = styled(Div)`
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: center;
     width: 90%;
 `;
 
 const NavLinkContainer = styled(Div)`
-    display: flex;
+    display: flex; 
     align-items: center;
-    min-width: 150px;
+    min-width: 150px; 
 `;
 
 const NavText = styled(P)`
-    color: #5a5a5a;
-`
+   color: #5a5a5a;
+`;
 
-export { ImageContainer, NavbarContainer, NavLinkContainer, NavbarLink, NavText };
-
+export {ImageContainer, NavbarContainer, NavLinkContainer, NavbarLink, NavText};
