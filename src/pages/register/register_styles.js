@@ -9,5 +9,8 @@ const RegisterContainer = styled(Div)`
     
 `;
 
+const AlertText = styled(P)`
+   color: red;
+`;
 
-export { RegisterContainer }
+export { AlertText, RegisterContainer }

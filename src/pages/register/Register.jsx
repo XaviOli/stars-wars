@@ -1,26 +1,40 @@
 import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
 import { Form, Input, Label} from '../../styles';
-import { RegisterContainer} from './register_styles';
+import { AlertText, RegisterContainer} from './register_styles';
+
+const initialState = {
+    name: '',
+    lastname: '',
+    email: '',
+    password: ''    
+}
 
 const Register = () => {
-    const [ formInformation, setFormInformation ] = useState({
-        name: '',
-        lastname: '',
-        email: '',
-        password: ''    
-    });
+    const [ userData, setUserData ] = useState(initialState);
+    const [ userHasAccount, setUserHasAccount ] = useState(false);
     const navigate = useNavigate();
 
 
-    const handleSubmit = (event) => {
+    const handleSubmit = (event, userData) => {
+        const localStorage = window.localStorage;
         event.preventDefault();
-        console.log(event)
+        const storedUser = localStorage.getItem("starwarsLocalUser");
+        const parseStoredUser = JSON.parse(storedUser);
+
+        if(parseStoredUser?.email === userData.email) {
+            setUserHasAccount(true)
+            return;
+        }
+
+        userHasAccount && setUserHasAccount(false)
+        localStorage.setItem("starwarsLocalUser", JSON.stringify(userData));
+        setUserData(initialState);
     }
 
     const handleInputChange = (target) => {
-        setFormInformation({
-            ...formInformation, [target.name]: target.value
+        setUserData({
+            ...userData, [target.name]: target.value
         })
     }
 
@@ -28,32 +42,32 @@ const Register = () => {
     <RegisterContainer>
         <h2>CREATE YOUR ACCOUNT</h2>
 
-        <Form onSubmit={(event) => handleSubmit(event)}>
+        <Form onSubmit={(event) => handleSubmit(event, userData)}>
             <Input 
                 type="text" 
                 name="name" 
-                value={formInformation.name}
+                value={userData.name}
                 onChange={(event) => handleInputChange(event.target)}
                 placeholder="First Name"
                 required/>
             <Input 
                 type="text" 
                 name="lastname" 
-                value={formInformation.lastname}
+                value={userData.lastname}
                 onChange={(event) => handleInputChange(event.target)}
                 placeholder="Last Name"
                 required/>
             <Input 
                 type="email" 
                 name="email" 
-                value={formInformation.email}
+                value={userData.email}
                 onChange={(event) => handleInputChange(event.target)}
                 placeholder="Email Address"
                 required/>
             <Input 
                 type="password" 
                 name="password" 
-                value={formInformation.password}
+                value={userData.password}
                 onChange={(event) => handleInputChange(event.target)}
                 placeholder="Password"
                 required/>
@@ -65,6 +79,8 @@ const Register = () => {
             <p>My home country/region: Spain. Change.</p>
 
             <button type="submit">Create Account</button>
+
+            {userHasAccount && <AlertText>You already own an account!</AlertText>}
         </Form>
 
         <p>Already have an account? <a onClick={() => navigate("/login")}>Sign In</a></p>
