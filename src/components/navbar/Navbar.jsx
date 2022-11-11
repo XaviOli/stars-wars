@@ -5,15 +5,17 @@ import {
   NavLinkContainer, 
   NavbarLink, 
   ImageContainer, 
-  NavText} from './navbar_styles';
-import {Img} from '../../styles'
+  NavText,
+  Image
+} from './navbar_styles';
+
  
 const Navbar = () => {
   return (
     <>
       <NavbarContainer>
         <ImageContainer>
-        <Img src={logo} alt='Star Wars Logo' />
+        <Image src={logo} alt='Star Wars Logo' />
         </ImageContainer>
         <NavLinkContainer>
           <NavbarLink to="/login">LOG IN</NavbarLink>

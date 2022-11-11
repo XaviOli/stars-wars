@@ -1,4 +1,4 @@
-.active {
+.nav-home-link.active {
     color: #FFFFFF;
     border-bottom: 2px solid #58a6ff;
-}
+};

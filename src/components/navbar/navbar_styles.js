@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { Div, P } from '../../styles';
+import { Div, P, Img } from '../../styles';
 import { NavLink } from 'react-router-dom';
 
 const NavbarContainer = styled(Div)`
@@ -19,6 +19,7 @@ const ImageContainer = styled(Div)`
     align-items: center;
     justify-content: center;
     width: 90%;
+   
 `;
 
 const NavLinkContainer = styled(Div)`
@@ -31,4 +32,9 @@ const NavText = styled(P)`
    color: #5a5a5a;
 `;
 
-export {ImageContainer, NavbarContainer, NavLinkContainer, NavbarLink, NavText};
+const Image = styled(Img)`
+    position: relative;
+    left: 75px;
+`;
+
+export {Image, ImageContainer, NavbarContainer, NavLinkContainer, NavbarLink, NavText};

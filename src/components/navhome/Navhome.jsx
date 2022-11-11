@@ -7,8 +7,10 @@ const Navhome = () => {
     <>
         <NavHomeLinkContainer className="nav-home-container">
           <NavhomeLink 
+          className="nav-home-link"
             to="/home" >HOME</NavhomeLink>
           <NavhomeLink 
+          className="nav-home-link"
           to="/starships">STARSHIPS</NavhomeLink>
         </NavHomeLinkContainer>
     </>
