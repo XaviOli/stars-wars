@@ -5,7 +5,6 @@ export const H1 = styled.h1`
 `;
 
 export const P = styled.p`
-    color: white;
 `;
 
 export const Link = styled.a`
