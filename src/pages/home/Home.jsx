@@ -10,23 +10,23 @@ export default function Home() {
       <img className='mx-7 flex justify-center justify-items-center' src={andor} alt='New film' />
         <div className="home-texts">
           <p className="p-text">
-          The crew behind Andor, now streaming on Disney+, was hard 
-          at work in production of the first season at Pinewood Studios 
-          at the time and Arjona and creator Tony Gilroy discussed Bix’s 
-          character arc at length. Now more than three quarters of the 
-          way through the season, viewers have witnessed the downward 
-          spiral taking Bix from self-made salvage dealer at the start to 
-          tortured captive being held against her will by the Empire. 
-          “Bix is bold and fearless, hardworking and incredibly loyal 
-          — sometimes to her own detriment,” Arjona explains. But her 
-          world begins to unravel swiftly.
+            The crew behind Andor, now streaming on Disney+, was hard 
+            at work in production of the first season at Pinewood Studios 
+            at the time and Arjona and creator Tony Gilroy discussed Bix’s 
+            character arc at length. Now more than three quarters of the 
+            way through the season, viewers have witnessed the downward 
+            spiral taking Bix from self-made salvage dealer at the start to 
+            tortured captive being held against her will by the Empire. 
+            “Bix is bold and fearless, hardworking and incredibly loyal 
+            — sometimes to her own detriment,” Arjona explains. But her 
+            world begins to unravel swiftly.
           </p>
         </div>
       </div>
       <footer>
         <div className="footer-links">
           <a href="http://facebook.com">
-            <FaFacebook className="link" />
+            <FaFacebook className="link flex items-center justify-center relative" />
           </a>
           <> </>
           <a href="http://twitter.com">
