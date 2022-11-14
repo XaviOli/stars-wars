@@ -7,7 +7,7 @@ export default function Home() {
     <div className="home-container">
       <div className="home-main">
       <img className=' ml-20 flex items-center justify-center' src={andor} alt='New film' />
-        <div className="home-texts">
+        <div className="home-texts my-12 text-justify font-semibold text-white mx-10">
           <p className="p-text py-2.5">
             The crew behind Andor, now streaming on Disney+, was hard 
             at work in production of the first season at Pinewood Studios 
