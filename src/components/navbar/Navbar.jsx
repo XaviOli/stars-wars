@@ -8,6 +8,7 @@ import {
   NavText,
   Image
 } from './navbar_styles';
+import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 
  
 const Navbar = () => {
@@ -15,7 +16,7 @@ const Navbar = () => {
     <>
       <NavbarContainer>
         <ImageContainer>
-        <Image src={logo} alt='Star Wars Logo' />
+          <Image src={logo} alt='Star Wars Logo' />
         </ImageContainer>
         <NavLinkContainer>
           <NavbarLink to="/login">LOG IN</NavbarLink>

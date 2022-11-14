@@ -2,14 +2,13 @@ import React from "react";
 import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import andor from '../../assets/img/1.jpeg';
 
-
 export default function Home() {
   return (
     <div className="home-container">
       <div className="home-main">
-      <img className='mx-7 flex justify-center justify-items-center' src={andor} alt='New film' />
+      <img className=' ml-20 flex items-center justify-center' src={andor} alt='New film' />
         <div className="home-texts">
-          <p className="p-text">
+          <p className="p-text py-2.5">
             The crew behind Andor, now streaming on Disney+, was hard 
             at work in production of the first season at Pinewood Studios 
             at the time and Arjona and creator Tony Gilroy discussed Bix’s 
@@ -24,9 +23,9 @@ export default function Home() {
         </div>
       </div>
       <footer>
-        <div className="footer-links">
+        <div className="footer-links flex items-center justify-center my-1.5">
           <a href="http://facebook.com">
-            <FaFacebook className="link flex items-center justify-center relative" />
+            <FaFacebook className="link" />
           </a>
           <> </>
           <a href="http://twitter.com">
@@ -41,7 +40,7 @@ export default function Home() {
             <FaYoutube className="link" />
           </a>
         </div>
-        <p className="footer-text">
+        <p className="footer-text flex items-center justify-center">
           TM & © Lucasfilm Ltd. All Rights Reserved{" "}
         </p>
       </footer>
