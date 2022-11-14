@@ -22,7 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/starships" element={<Starships />} />
           <Route path="/starship/:id" element={<StarshipDetails />} />
-          <Route path="/home" element={<Home />} />
+          <Route path="/" element={<Home />} />
         </Routes>
 
       </BrowserRouter>

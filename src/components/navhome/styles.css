@@ -1,4 +1,38 @@
-.nav-home-link.active {
-    color: #FFFFFF;
-    border-bottom: 2px solid #58a6ff;
+.nav-links {
+    display: flex;
+    background-color: #000;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(45, 45, 45);
+    height: 45px;
+    font-size: 1.2rem;
+    font-weight: 500;
+};
+
+.nav-links {
+    display: flex;
+    background-color: #000;
+    list-style: none;
+    justify-content: center;
+    width: 100%;
+    border-bottom: 1px solid rgb(45, 45, 45);
+    height: 45px;
+    font-size: 1.2rem;
+    font-weight: 500;
+};
+
+.nav-links li {
+    border-left: 1px solid rgb(54, 54, 54);
+    border-right: 1px solid rgb(54, 54, 54);
+    padding: 10px 10px;
+};
+
+.nav-links a {
+    padding: 0px 0px 10px 0px;
+};
+
+.nav-links a:focus {
+    color: white;
+    border-bottom: 2px groove rgb(255, 255, 255);
 };

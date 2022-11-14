@@ -1,19 +1,21 @@
-import React from 'react'
-import { NavHomeLinkContainer, NavhomeLink } from './navhome_styles';
+import React from 'react';
 import './styles.css';
+import { Link } from 'react-router-dom';
 
 const Navhome = () => {
   return (
-    <>
-        <NavHomeLinkContainer className="nav-home-container">
-          <NavhomeLink 
-          className="nav-home-link"
-            to="/home" >HOME</NavhomeLink>
-          <NavhomeLink 
-          className="nav-home-link"
-          to="/starships">STARSHIPS</NavhomeLink>
-        </NavHomeLinkContainer>
-    </>
+        <header>
+          <nav>
+            <ul className='nav-links'>
+              <li>
+                <Link to='/'>HOME</Link>
+              </li>
+              <li>
+                <Link to='/starships'>STARSHIPS</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
   )
 }
 
