@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className="home-container">
       <div className="home-main">
-      <img src={andor} alt='New film' />
+      <img className='mx-7 flex justify-center justify-items-center' src={andor} alt='New film' />
         <div className="home-texts">
           <p className="p-text">
           The crew behind Andor, now streaming on Disney+, was hard 
