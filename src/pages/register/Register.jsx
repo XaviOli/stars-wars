@@ -38,9 +38,9 @@ const Register = () => {
         })
     }
 
-  return (
+  return ( 
     <RegisterContainer>
-        <h2>CREATE YOUR ACCOUNT</h2>
+        <h2 className='text-yellow-300 py-1 pt-3 font-bold'>CREATE YOUR ACCOUNT</h2>
 
         <Form onSubmit={(event) => handleSubmit(event, userData)}>
             <Input 
@@ -78,7 +78,7 @@ const Register = () => {
             <p>By creating an account, you agree to our Terms of Use, and acknowledge that you have read our Privacy Policy, Cookies Policy and UK & EU Privacy Rights. More...</p>
             <p>My home country/region: Spain. Change.</p>
 
-            <button type="submit">Create Account</button>
+            <button className="btn btn-outline btn-warning" type="submit">Create Account</button>
 
             {userHasAccount && <AlertText>You already own an account!</AlertText>}
         </Form>

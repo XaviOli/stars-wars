@@ -32,7 +32,7 @@ const Login = () => {
 
   return (
     <LoginContainer>
-        <h2>LOGIN</h2>
+        <h2 className='text-yellow-300 py-1 pt-3 font-bold text-2xl'>LOGIN</h2>
 
         <Form onSubmit={(event) => handleSubmit(event)}>
             <Input 
@@ -50,7 +50,7 @@ const Login = () => {
                 placeholder="Password"
                 required/>
 
-            <button type="submit">Login</button>
+            <button className="btn btn-outline btn-warning" type="submit">Login</button>
         </Form>
     </LoginContainer>
   )
