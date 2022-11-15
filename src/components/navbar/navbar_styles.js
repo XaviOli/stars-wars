@@ -33,8 +33,6 @@ const NavText = styled(P)`
 `;
 
 const Image = styled(Img)`
-    position: relative;
-    left: 75px;
 `;
 
 export {Image, ImageContainer, NavbarContainer, NavLinkContainer, NavbarLink, NavText};

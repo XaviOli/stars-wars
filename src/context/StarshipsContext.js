@@ -2,7 +2,7 @@ import React, { createContext, useState} from 'react';
 import axios from 'axios';
 
 
-const StarshipsContext = React.createContext();
+const StarshipsContext = createContext();
 
 const StarshipsProvider = ({children}) => {
     const [ starships, setStarships ] = useState([]);
@@ -30,7 +30,7 @@ const StarshipsProvider = ({children}) => {
         setIsLoading(true);
 
         try {
-          const response = await axios.get('https://swapi.dev/api/starships/', {
+          const response = await axios.get('https://swapi.py4e.com/api/starships', {
                   params: {
                   page: page
                   }
@@ -63,7 +63,7 @@ const StarshipsProvider = ({children}) => {
     const getStarshipById = async (id) => {
         setIsLoading(true);
         try {
-          const response = await axios.get(`https://swapi.dev/api/starships/${id}`)
+          const response = await axios.get(`https://swapi.py4e.com/api/starships/${id}`)
           error && setError(false);
           setStarshipDetails(response.data);
         }

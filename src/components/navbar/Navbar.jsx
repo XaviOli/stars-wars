@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../assets/img/logo-star-wars.png';
-import { FaFacebook, FaTwitter, FaInstagram, FaYoutube } from "react-icons/fa";
 import {
   NavbarContainer, 
   NavLinkContainer, 
@@ -15,27 +14,8 @@ const Navbar = () => {
   return (
     <>
       <NavbarContainer>
-        <nav>
-        <div className="nav-social flex items-center justify-center my-1.5">
-          <a href="http://facebook.com">
-            <FaFacebook className="link mr-3 ml-1" />
-          </a>
-          <> </>
-          <a href="http://twitter.com">
-            <FaTwitter className="link mr-3 ml-1" />
-          </a>
-          <> </>
-          <a href="http://instagram.com">
-            <FaInstagram className="link mr-3 ml-1" />
-          </a>
-          <> </>
-          <a href="http://youtube.com">
-            <FaYoutube className="link mr-3 ml-1" />
-          </a>
-        </div>
-        </nav>
         <ImageContainer>
-          <Image src={logo} alt='Star Wars Logo' />
+        <Image src={logo} alt='Star Wars Logo' />
         </ImageContainer>
         <NavLinkContainer>
           <NavbarLink to="/login">LOG IN</NavbarLink>

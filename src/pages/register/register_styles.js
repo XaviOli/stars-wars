@@ -6,7 +6,6 @@ const RegisterContainer = styled(Div)`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
 `;
 
 const AlertText = styled(P)`
