@@ -17,11 +17,11 @@ const Navbar = () => {
         <ImageContainer>
           <Image src={logo} alt='Star Wars Logo' />
         </ImageContainer>
-        <NavLinkContainer>
+        <nav className='absolute right-0'>
           <NavbarLink to="/login">LOG IN</NavbarLink>
           <NavText>{"//"}</NavText>
           <NavbarLink to="/register">SING UP</NavbarLink>
-        </NavLinkContainer>
+        </nav>
       </NavbarContainer>
       </>)
 }

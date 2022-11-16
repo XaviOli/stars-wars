@@ -5,19 +5,19 @@ export const Footer = () => {
   return (<footer>
     <div className="footer-links flex items-center justify-center my-1.5">
       <a href="http://facebook.com">
-        <FaFacebook className="link mr-3 ml-3" />
+        <FaFacebook className="link mr-3 ml-3 text-2xl" />
       </a>
       <> </>
       <a href="http://twitter.com">
-        <FaTwitter className="link mr-3 ml-3" />
+        <FaTwitter className="link mr-3 ml-3 text-2xl" />
       </a>
       <> </>
       <a href="http://instagram.com">
-        <FaInstagram className="link mr-3 ml-3" />
+        <FaInstagram className="link mr-3 ml-3 text-2xl" />
       </a>
       <> </>
       <a href="http://youtube.com">
-        <FaYoutube className="link mr-3 ml-3" />
+        <FaYoutube className="link mr-3 ml-3 text-2xl" />
       </a>
     </div>
     <p className="footer-text flex items-center justify-center">
